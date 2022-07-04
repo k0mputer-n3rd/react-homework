@@ -1,22 +1,31 @@
+// React Homework
+// Day 01 In Class Challenge
+// Allen P.
+// 07/03/2022
+
+// App.js
+// ======
+
+// External Links
 import logo from './logo.svg';
 import './App.css';
+import getMoviesByName from './getMoviesByName';
+import getMovieDetailsById from './getMovieDetailsById';
+
+// App()
+// ======
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={() => getMoviesByName("Avengers")}>Get Movies</button>
+        <br />
+        <button onClick={() => getMovieDetailsById("tt0118661")}>
+          Get A Movie
+        </button>
+        <p>Use Chrome Inspector to view response.</p>
       </header>
     </div>
   );
