@@ -1,3 +1,12 @@
+// React Homework
+// Day 01 Take Home Challenge
+// Allen P.
+// 07/06/2022
+
+// App.js
+// ======
+
+// External Links
 import logo from './logo.svg';
 import './App.css';
 
@@ -7,16 +16,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Day 01 Take Home Challenge
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
