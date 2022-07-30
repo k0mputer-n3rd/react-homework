@@ -1,5 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+// React Homework Final Project
+// Stellar Store
+// Allen P.
+// 07/29/2022
+
+// App.js
+// ======
+
+// React Components
+// (none imported)
+
+// Application Components
+import logo from "./logo.svg";
+
+// Stylesheets
+import "./App.css";
 
 function App() {
   return (
@@ -9,14 +23,16 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </h1>
       </header>
     </div>
   );
