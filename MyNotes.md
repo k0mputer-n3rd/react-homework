@@ -32,8 +32,7 @@ After cloning, I deleted the README.md file. The React installation will create 
 ## Installing React
 
 At the terminal:
-npx create-react-app truthy-falsy-store
-npm install react-router-dom
+npx create-react-app react-homework
 
 Note: "npm install" will use the package.json file and install all dependencies required. This is useful when cloning someone else's application from GitHub, where the dependencies are not included.
 
@@ -41,3 +40,14 @@ Note: "npm install" will use the package.json file and install all dependencies 
 
 After installing npm, I created MyNotes.md (this file). It will contain notes not included in
 README.md
+
+## Stellar Store
+
+This is a branch of main, which means I don't need to reinstall react.
+
+## Install Additional React Components
+
+At the terminal:
+npm install react-router-dom
+<do I need more?>
+<npm audit reports vulnerabilities. Do I fix?>

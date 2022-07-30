@@ -1,41 +1,55 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 07/29/2022
+// 07/30/2022
 
 // App.js
 // ======
 
 // React Components
-// (none imported)
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Contexts
+// import { CartProvider } from "./contexts/CartContext.js";
 
 // Application Components
-import logo from "./logo.svg";
+// import HeaderFooter from "./components/HeaderFooter";
+import Home from "./components/Home";
+// import Products from "./components/Products";
+// import ProductDetails from "./components/ProductDetails";
+// import Cart from "./components/Cart";
+// import Checkout from "./components/Checkout";
+// import About from "./components/About";
+import NotFound from "./components/NotFound";
 
 // Stylesheets
 import "./App.css";
 
-function App() {
+// App()
+// =====
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <h1>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </h1>
-      </header>
+      {/* <CartProvider> */}
+        <BrowserRouter>
+          {/* <HeaderFooter> */}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              {/* <Route path="products" element={<Products />} /> */}
+              {/* <Route path="products/:id" element={<ProductDetails />} /> */}
+              {/* <Route path="cart" element={<Cart />} /> */}
+              {/* <Route path="checkout" element={<Checkout />} /> */}
+              {/* <Route path="about" element={<About />} /> */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          {/* </HeaderFooter> */}
+        </BrowserRouter>
+      {/* </CartProvider> */}
     </div>
   );
-}
+};
 
 export default App;
