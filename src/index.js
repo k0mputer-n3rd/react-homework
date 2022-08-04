@@ -1,12 +1,12 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 07/30/2022
+// 08/04/2022
 
 // index.js
 // ========
 
-// ReportWebVitals has been removed; I'm not using it, it isn't needed.
+// ReportWebVitals has been removed; I'm not using it, so it isn't needed.
 
 // React Components
 import React from "react";
