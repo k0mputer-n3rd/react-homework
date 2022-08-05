@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 07/30/2022
+// 08/04/2022
 
 // Footer.js
 // =========
@@ -10,7 +10,7 @@
 import React from "react";
 
 // Application Components
-import { FooterDiv, FooterText } from "../styles/StyledComponents";
+import { FooterDiv, FooterText } from "../styles/StyledFooter";
 
 // Footer()
 // ========

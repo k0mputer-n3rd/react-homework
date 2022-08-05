@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 07/30/2022
+// 08/04/2022
 
 // Header.js
 // =========
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext.js";
 
 // Styles
-import { HeaderDiv, HeaderText, BrandText } from "../styles/StyledComponents";
+import { HeaderDiv, HeaderText, BrandText } from "../styles/StyledHeader";
 
 // Header()
 // ========
@@ -32,36 +32,6 @@ const Header = () => {
         <p>Test: {test}</p>
       </HeaderText>
       <HeaderText>Navigation Links</HeaderText>
-    </HeaderDiv>
-  );
-};
-
-// XHeader()
-// ========
-
-const XHeader = (props) => {
-  const { items, test } = useContext(CartContext);
-  return (
-    <HeaderDiv>
-      <p>Stellar Store</p>
-      <div>
-        <p>Items in Cart: {items.length}</p>
-      </div>
-      <div>
-        <p>Test: {test}</p>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div style={{ padding: 10 }}>
-          <Link to="/" className="Link">
-            Home
-          </Link>
-        </div>
-        <div style={{ padding: 10 }}>
-          <Link to="/about" className="Link">
-            About
-          </Link>
-        </div>
-      </div>
     </HeaderDiv>
   );
 };

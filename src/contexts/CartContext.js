@@ -111,6 +111,15 @@ const CartProvider = (props) => {
     setItems([]);
   };
 
+  const incTest = () => {
+    setTest(test + 1);
+  };
+
+  const decTest = () => {
+    setTest(test - 1);
+  };
+
+
   // Return from CartProvider
   // ------ ---- ------------
 
@@ -126,6 +135,8 @@ const CartProvider = (props) => {
         clearCart,
         test,
         setTest,
+        incTest,
+        decTest,
       }}
     >
       {props.children}

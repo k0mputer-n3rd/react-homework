@@ -9,8 +9,16 @@
 // React Components
 import styled from "styled-components";
 
-// Styles
-import { textFont, headingFont, blue1, blue4, shade1 } from "./StyleConstants";
+// Style Constants
+import {
+  textFont,
+  headingFont,
+  blue1,
+  blue4,
+  blue5,
+  shade1,
+  shade2,
+} from "./StyleConstants";
 
 // AppDiv
 // ======
@@ -28,53 +36,29 @@ const AppDiv = styled.div`
   background-attachment: fixed;
 `;
 
-// HeaderDiv
-// =========
-
-const HeaderDiv = styled.div`
-  padding: 2px 5px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: ${shade1};
-`;
-
-// HeaderText
-// ==========
-
-const HeaderText = styled.div`
-  justify-content: center;
-  color: ${blue1};
-`;
-
-// BrandText
-// =========
-
-const BrandText = styled.div`
+const PageTitle = styled.div`
+  padding: 0.5rem;
+  text-align: center;
   font-family: ${headingFont}, serif;
-  font-size: 2em;
+  font-size: 3rem;
   font-weight: 400;
   color: ${blue1};
+  //  background-color: ${shade1};
 `;
 
-// FooterDiv
-// =========
-
-const FooterDiv = styled.div`
-  padding: 5px;
+const ButtonContainer = styled.div`
   display: flex;
-  align-items: center;
   flex-direction: row;
-  justify-content: center;
-  background-color: ${shade1};
+  justify-content: space-around;
+  //  background-color: ${shade1};
 `;
 
-// FooterText
-// ==========
-
-const FooterText = styled.div`
-  color: ${blue1};
+const Button = styled.button`
+  font-family: ${textFont}, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: ${blue5};
+  background-color: ${shade2};
 `;
 
-export { AppDiv, HeaderDiv, HeaderText, BrandText, FooterDiv, FooterText };
+export { AppDiv, PageTitle, ButtonContainer, Button };

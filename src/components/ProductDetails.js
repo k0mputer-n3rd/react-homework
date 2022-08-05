@@ -1,7 +1,7 @@
 // React Homework Final Project
-// Truthy-Falsy Store
+// Stellar Store
 // Allen P.
-// 05/11/2022
+// 08/04/2022
 
 // ProductDetails.js
 // =================
@@ -16,7 +16,9 @@ import { CartContext } from "../contexts/CartContext.js";
 
 // Application Components
 
-// Stylesheets
+// Styles
+import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
+import { ProductDiv, ProductLayout } from "../styles/StyledProducts";
 
 // ProductDetails()
 // ================

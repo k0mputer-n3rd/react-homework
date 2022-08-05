@@ -11,26 +11,30 @@
 // React Components
 import styled from "styled-components";
 
-// Styles
-import { textFont, headingFont, blue1, blue4 } from "./StyleConstants";
+// Style Constants
+import { textFont, headingFont, blue1 } from "./StyleConstants";
 
 // HomeDiv
 // =======
 
 const HomeDiv = styled.div`
-  padding: 5px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 85vh;
   font-family: ${textFont}, sans-serif;
   color: ${blue1};
 `;
 
-// TitleDiv
-// ========
+// HomeTitle
+// =========
 
-const TitleDiv = styled.div`
+const HomeTitle = styled.div`
   text-align: center;
   font-family: ${headingFont}, serif;
-  font-size: 10em;
+  font-size: 10rem;
   font-weight: 400;
 `;
 
-export { HomeDiv, TitleDiv };
+export { HomeDiv, HomeTitle };

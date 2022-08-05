@@ -51,4 +51,10 @@ npm install react-router-dom
 npm install styled-components
 
 <do I need more?>
+
+## To Do List
+
+Add navigation to header.
+Products.js should have product fetch removed and placed elsewhere (see Andrew's holidays, custom hook).
+
 <npm audit reports vulnerabilities. Do I fix?>

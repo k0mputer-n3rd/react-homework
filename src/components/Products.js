@@ -1,7 +1,7 @@
 // React Homework Final Project
-// Truthy-Falsy Store
+// Stellar Store
 // Allen P.
-// 05/10/2022
+// 08/04/2022
 
 // Products.js
 // ===========
@@ -9,18 +9,30 @@
 // React Components
 import React from "react";
 import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+
+// Contexts
+import { CartContext } from "../contexts/CartContext.js";
 
 // Application Components
 import ProductCard from "./ProductCard";
 
-// Stylesheets
+// Styles
+import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
+import { ProductDiv, ProductLayout } from "../styles/StyledProducts";
 
 // Products()
 // ==========
 
 const Products = () => {
   // Create an empty product list as a state variable
+  const { items } = useContext(CartContext);
+  const { test, setTest, incTest, decTest } = useContext(CartContext);
+  const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
+  let Buttons;
+  console.log(`Products! Test=${test}`);
 
   console.log("Products!");
 
@@ -34,19 +46,26 @@ const Products = () => {
     getProducts();
   }, []);
 
-  productList.map((product) => console.log(product));
+  // productList.map((product) => console.log(product));
+
+  Buttons = (
+    <ButtonContainer>
+      <Button onClick={() => navigate("/")}>Home</Button>
+      <Button onClick={incTest}>Increment Test</Button>
+      <Button onClick={decTest}>Decrement Test</Button>
+    </ButtonContainer>
+  );
 
   return (
-    <div>
-      <h1>Products</h1>
-      <br />
-      <p>Click a product to select it.</p>
-      <div className="ProductCards-Box">
+    <ProductDiv>
+      <PageTitle>Products</PageTitle>
+      <ProductLayout>
         {productList.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
-      </div>
-    </div>
+      </ProductLayout>
+      {Buttons}
+    </ProductDiv>
   );
 };
 

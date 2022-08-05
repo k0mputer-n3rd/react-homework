@@ -1,7 +1,7 @@
 // React Homework Final Project
-// Truthy-Falsy Store
+// Stellar Store
 // Allen P.
-// 05/10/2022
+// 08/04/2022
 
 // Cart.js
 // =======
@@ -16,7 +16,8 @@ import { CartContext } from "../contexts/CartContext.js";
 
 // Application Components
 
-// Stylesheets
+// Styles
+import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
 
 // Cart()
 // ======
@@ -65,7 +66,7 @@ const Cart = () => {
 
   return (
     <div>
-      <h1>Cart Contents</h1>
+      <PageTitle>Cart Contents</PageTitle>
       <p>Items in Cart: {items.length}</p>
       <table>
         <tbody>{itemList}</tbody>
