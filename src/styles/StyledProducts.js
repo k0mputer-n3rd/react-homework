@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 08/04/2022
+// 08/05/2022
 
 // StyledProducts.js
 // =================
@@ -19,10 +19,11 @@ import { textFont, blue1, shade3 } from "./StyleConstants";
 
 const ProductDiv = styled.div`
   padding: 0.5rem;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 85vh;
+  text-align: center;
   font-family: ${textFont}, sans-serif;
   color: ${blue1};
 `;
@@ -57,13 +58,24 @@ const ProductBox = styled.div`
   background-color: ${shade3};
 `;
 
-// ProductPoster
-// =============
+// ProductPoster1
+// ==============
 
-const ProductPoster = styled.img`
+const ProductPoster1 = styled.img`
   margin: 0.5rem;
   max-width: 18vw;
   max-height: 24vw;
+`;
+
+// ProductPoster2
+// ==============
+
+const ProductPoster2 = styled.img`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60vw;
+  max-height: 80vh;
 `;
 
 // ProductTitle
@@ -96,7 +108,8 @@ export {
   ProductDiv,
   ProductLayout,
   ProductBox,
-  ProductPoster,
+  ProductPoster1,
+  ProductPoster2,
   ProductTitle,
   ProductPrice,
 };

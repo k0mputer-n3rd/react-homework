@@ -14,8 +14,6 @@ import { useNavigate } from "react-router-dom";
 // Contexts
 import { CartContext } from "../contexts/CartContext.js";
 
-// Application Components
-
 // Styles
 import { ButtonContainer, Button } from "../styles/StyledComponents";
 import { HomeDiv, HomeTitle } from "../styles/StyledHome";

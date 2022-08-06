@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 08/04/2022
+// 08/05/2022
 
 // StyledHeader.js
 // ===============
@@ -44,4 +44,18 @@ const BrandText = styled.div`
   color: ${blue1};
 `;
 
-export { HeaderDiv, HeaderText, BrandText };
+// HeaderNav
+// =========
+
+const HeaderNav = styled.div`
+  display: flex;
+`;
+
+// HeaderLink
+// ==========
+
+const HeaderLink = styled.div`
+  padding: 1rem;
+`;
+
+export { HeaderDiv, HeaderText, BrandText, HeaderNav, HeaderLink };

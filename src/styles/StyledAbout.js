@@ -3,10 +3,10 @@
 // Allen P.
 // 08/05/2022
 
-// StyledHome.js
-// =============
+// StyledAbout.js
+// ==============
 
-// Styling for the home page.
+// Styling for the about page.
 
 // React Components
 import styled from "styled-components";
@@ -14,10 +14,10 @@ import styled from "styled-components";
 // Style Constants
 import { textFont, headingFont, blue1 } from "./StyleConstants";
 
-// HomeDiv
-// =======
+// AboutDiv
+// ========
 
-const HomeDiv = styled.div`
+const AboutDiv = styled.div`
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -27,14 +27,25 @@ const HomeDiv = styled.div`
   color: ${blue1};
 `;
 
-// HomeTitle
-// =========
+// AboutTitle
+// ==========
 
-const HomeTitle = styled.div`
+const AboutTitle = styled.div`
   text-align: center;
   font-family: ${headingFont}, serif;
-  font-size: 10rem;
+  font-size: 5rem;
   font-weight: 400;
 `;
 
-export { HomeDiv, HomeTitle };
+// AboutText
+// =========
+
+const AboutText = styled.div`
+  padding: 0 10vw;
+  text-align: justify;
+  font-family: ${textFont}, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+`;
+
+export { AboutDiv, AboutTitle, AboutText };

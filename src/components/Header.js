@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 08/04/2022
+// 08/05/2022
 
 // Header.js
 // =========
@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext.js";
 
 // Styles
-import { HeaderDiv, HeaderText, BrandText } from "../styles/StyledHeader";
+import { HeaderDiv, HeaderText, BrandText, HeaderNav, HeaderLink } from "../styles/StyledHeader";
 
 // Header()
 // ========
@@ -31,7 +31,18 @@ const Header = () => {
       <HeaderText>
         <p>Test: {test}</p>
       </HeaderText>
-      <HeaderText>Navigation Links</HeaderText>
+      <HeaderNav>
+        <HeaderLink>
+          <Link to="/" className="Link">
+            Home
+          </Link>
+        </HeaderLink>
+        <HeaderLink>
+          <Link to="/about" className="Link">
+            About
+          </Link>
+        </HeaderLink>
+      </HeaderNav>
     </HeaderDiv>
   );
 };

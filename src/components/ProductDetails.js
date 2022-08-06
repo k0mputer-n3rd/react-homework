@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 08/04/2022
+// 08/05/2022
 
 // ProductDetails.js
 // =================
@@ -18,7 +18,7 @@ import { CartContext } from "../contexts/CartContext.js";
 
 // Styles
 import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
-import { ProductDiv, ProductLayout } from "../styles/StyledProducts";
+import { ProductDiv, ProductPoster2, ProductLayout } from "../styles/StyledProducts";
 
 // ProductDetails()
 // ================
@@ -64,50 +64,53 @@ const ProductDetails = () => {
     // setQuantity(1);
     console.log("Not in Cart");
     Buttons = (
-      <>
-        <button onClick={() => addItemToCart(product, quantity)}>Add Item to Cart</button>
+      <ButtonContainer>
+        <Button onClick={() => addItemToCart(product, quantity)}>Add Item to Cart</Button>
         <br />
-        <button onClick={() => navigate("/products")}>View Products</button>
+        <Button onClick={() => navigate("/products")}>View Products</Button>
         <br />
-        <button onClick={() => navigate("/cart")}>View Cart</button>
+        <Button onClick={() => navigate("/cart")}>View Cart</Button>
         <br />
-      </>
+      </ButtonContainer>
     );
   } else {
     // console.log(item.quantity);
     // setQuantity(item.quantity);
     console.log("Item in Cart");
     Buttons = (
-      <>
-        <button onClick={() => updateItemInCart(product.id, quantity)}>Update Item in Cart</button>
+      <ButtonContainer>
+        <Button onClick={() => updateItemInCart(product.id, quantity)}>Update Item in Cart</Button>
         <br />
-        <button onClick={() => deleteItemInCart(product.id)}>Delete Item in Cart</button>
+        <Button onClick={() => deleteItemInCart(product.id)}>Delete Item in Cart</Button>
         <br />
-        <button onClick={() => navigate("/products")}>View Products</button>
+        <Button onClick={() => navigate("/products")}>View Products</Button>
         <br />
-        <button onClick={() => navigate("/cart")}>View Cart</button>
+        <Button onClick={() => navigate("/cart")}>View Cart</Button>
         <br />
-      </>
+      </ButtonContainer>
     );
  }
 
   return (
-    <div>
+    <ProductDiv>
       <p>Items in Cart: {items.length}</p>
-      <h1>{product.title}</h1>
-      <br />
+      <PageTitle>{product.title}</PageTitle>
+      <ProductPoster2
+        src={product.image}
+        alt="The Product"
+      />
       <div>
         <label htmlFor="qty">Quantity</label>
         <input
           name="qty"
           type="number"
-          autocomplete="off"
+          autoComplete="off"
           value={quantity}
           onChange={(event) => setQuantity(event.target.value)}
         />
       </div>
       {Buttons}
-    </div>
+    </ProductDiv>
   );
 };
 

@@ -1,7 +1,7 @@
 // React Homework Final Project
 // Stellar Store
 // Allen P.
-// 08/04/2022
+// 08/05/2022
 
 // Cart.js
 // =======
@@ -18,6 +18,7 @@ import { CartContext } from "../contexts/CartContext.js";
 
 // Styles
 import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
+import { CartDiv } from "../styles/StyledCart";
 
 // Cart()
 // ======
@@ -39,10 +40,9 @@ const Cart = () => {
   if (items.length === 0) {
     itemList = <li>Cart is empty.</li>;
     Buttons = (
-      <>
-        <button onClick={() => navigate("/products")}>View Products</button>
-        <br />
-      </>
+      <ButtonContainer>
+        <Button onClick={() => navigate("/products")}>View Products</Button>
+      </ButtonContainer>
     );
   } else {
     itemList = items.map((item, index) => (
@@ -53,19 +53,16 @@ const Cart = () => {
       </tr>
     ));
     Buttons = (
-      <>
-        <button onClick={() => navigate("/products")}>View Products</button>
-        <br />
-        <button onClick={() => cancelOrder()}>Cancel Order</button>
-        <br />
-        <button onClick={() => navigate("/checkout")}>Checkout</button>
-        <br />
-      </>
+      <ButtonContainer>
+        <Button onClick={() => navigate("/products")}>View Products</Button>
+        <Button onClick={() => cancelOrder()}>Cancel Order</Button>
+        <Button onClick={() => navigate("/checkout")}>Checkout</Button>
+      </ButtonContainer>
     );
   }
 
   return (
-    <div>
+    <CartDiv>
       <PageTitle>Cart Contents</PageTitle>
       <p>Items in Cart: {items.length}</p>
       <table>
@@ -75,7 +72,7 @@ const Cart = () => {
       <p>Total is: ${totalCart().toFixed(2)}</p>
       <br />
       {Buttons}
-    </div>
+    </CartDiv>
   );
 };
 

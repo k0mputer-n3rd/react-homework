@@ -1,7 +1,7 @@
 // React Homework Final Project
-// Truthy-Falsy Store
+// Stellar Store
 // Allen P.
-// 05/08/2022
+// 08/05/2022
 
 // Checkout.js
 // ===========
@@ -16,7 +16,9 @@ import { CartContext } from "../contexts/CartContext.js";
 
 // Application Components
 
-// Stylesheets
+// Styles
+import { PageTitle, ButtonContainer, Button } from "../styles/StyledComponents";
+import { CheckoutDiv } from "../styles/StyledCheckout";
 
 // Checkout()
 // ==========
@@ -51,8 +53,8 @@ const Checkout = () => {
   };
 
   return (
-    <div>
-      <h1>Checkout</h1>
+    <CheckoutDiv>
+      <PageTitle>Checkout</PageTitle>
       <p>Your order total is: ${totalCart().toFixed(2)}</p>
       <br />
       <form onSubmit={handleSubmit}>
@@ -97,15 +99,14 @@ const Checkout = () => {
             onChange={(event) => setCardInfo(event.target.value)}
           />
         </div>
-        <button onClick={() => navigate("/products")}>View Products</button>
-        <br />
-        <button onClick={() => navigate("/cart")}>View Cart</button>
-        <br />
-        <button onClick={() => cancelOrder()}>Cancel Order</button>
-        <br />
-        <button type="submit">Submit Order</button>
+        <ButtonContainer>
+        <Button onClick={() => navigate("/products")}>View Products</Button>
+        <Button onClick={() => navigate("/cart")}>View Cart</Button>
+        <Button onClick={() => cancelOrder()}>Cancel Order</Button>
+        <Button type="submit">Submit Order</Button>
+        </ButtonContainer>
       </form>
-    </div>
+    </CheckoutDiv>
   );
 };
 
